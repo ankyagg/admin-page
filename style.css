@@ -1,0 +1,261 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "PP Neue Montreal", sans-serif;
+}
+
+body {
+  width: 1440px;
+  background-color: #F8F9FA;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("./fonts/PPNeueMontreal-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("./fonts/PPNeueMontreal-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+.main-logo {
+  width: 208px;
+  height: 64px;
+  padding-left: 32px;
+  padding-top: 27px;
+}
+
+ul svg {
+  position: relative;
+  top: 7px;
+  right: 3px;
+}
+
+aside h3 {
+  width: 240px;
+  height: 64px;
+}
+
+.sidebar {
+  height: 1200px;
+  width: 240px;
+  background-color: #212529;
+  color: #FFFFFF;
+  transition: width 0.3s;
+}
+.sidebar.collapsed {
+  width: 80px;
+}
+.sidebar.collapsed .nav-text,
+.sidebar.collapsed .main-logo,
+.sidebar.collapsed .user {
+  display: none;
+}
+
+.top {
+  display: flex;
+}
+
+.collapse {
+  position: absolute;
+  left: 190px;
+}
+
+aside ul {
+  list-style-type: none;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 2.5%;
+  font-size: 14px;
+}
+
+.list-ele {
+  height: 48px;
+  border: none;
+  padding-left: 16px;
+  padding-top: 4px;
+  border: 0px solid transparent;
+  margin-bottom: 5px;
+}
+
+.list-ele:hover {
+  border: 0.1px solid transparent;
+  border-radius: 8px;
+  background-color: #343A40;
+}
+
+.working-opt {
+  padding-left: 32px;
+  padding-top: 16px;
+  width: 176px;
+}
+
+.settings {
+  height: 186px;
+  width: 176px;
+  padding-left: 32px;
+  padding-top: 16px;
+}
+.settings span {
+  font-size: 14px;
+  color: #495057;
+}
+
+.main-set {
+  margin-top: 16px;
+}
+
+.right-side {
+  background-color: #F8F9FA;
+}
+
+.account-part {
+  height: 64px;
+  position: absolute;
+  top: 15px;
+  left: 1240px;
+  margin-right: 8px;
+  margin-right: 8px;
+}
+
+.cust_list {
+  position: absolute;
+  top: 115px;
+  left: 300px;
+}
+.cust_list h1 {
+  font-size: 46px;
+  height: 72px;
+  margin-bottom: 10px;
+}
+.cust_list .line2 {
+  font-size: 14px;
+}
+.cust_list .line2 span {
+  color: #6C757D;
+  font-size: 14px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  position: absolute;
+  top: 260px;
+  left: 290px;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+table {
+  position: absolute;
+  top: 350px;
+  left: 290px;
+  padding: 12px 15px 65px 15px;
+  border: 1px solid #F8F9FA;
+  border-radius: 8px;
+  background-color: white;
+  margin-right: 10px;
+  margin-left: -12px;
+  margin-top: -25px;
+}
+table th {
+  border-bottom: 1px solid #E9ECEF;
+  border-right: 1px solid #E9ECEF;
+  color: #6C757D;
+  padding: 12px;
+  font-size: 12px;
+}
+table th .class {
+  display: none;
+}
+table td {
+  border-bottom: 1px solid #E9ECEF;
+  border-right: 1px solid #E9ECEF;
+  padding-left: 17px;
+  padding-bottom: 6px;
+}
+
+.down .button {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border: 1.5px solid #CED4DA;
+  border-radius: 8px;
+  font-weight: 500;
+  position: relative;
+  left: 300px;
+  bottom: 112px;
+  z-index: 10;
+}
+.down .button:hover {
+  border: 1.5px solid #0057FC;
+  color: #0057FC;
+}
+
+.dr {
+  width: 138px;
+  height: 40px;
+  border: 1.5px solid #CED4DA;
+  border-radius: 8px;
+  position: relative;
+  left: 600px;
+  z-index: 10;
+  bottom: 152px;
+}
+
+.search-bar {
+  width: 320px;
+}
+.search-bar input {
+  width: 320px;
+  height: 40px;
+  position: relative;
+  bottom: 1031px;
+  left: 1180px;
+  border-radius: 8px;
+  border: 1px solid #CED4DA;
+  padding-left: 16px;
+}
+.search-bar input ::-moz-placeholder {
+  color: #CED4DA;
+}
+.search-bar input ::placeholder {
+  color: #CED4DA;
+}/*# sourceMappingURL=style.css.map */
