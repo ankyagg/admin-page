@@ -170,6 +170,9 @@ aside ul {
   overflow: hidden;
   z-index: 10;
 }
+.dropdown-menu a {
+  text-decoration: none;
+}
 
 .dropdown-item {
   padding: 12px 16px;

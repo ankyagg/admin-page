@@ -184,6 +184,9 @@ aside {
     min-width: 220px;
     overflow: hidden;
     z-index: 10;
+    a{
+        text-decoration: none;
+    }
 }
 
 .dropdown-item {
