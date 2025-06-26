@@ -2,11 +2,12 @@
   margin: 0px;
   padding: 0px;
   font-family: "PP Neue Montreal", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  width: 1440px;
   background-color: #F8F9FA;
+  min-height: 100vh;
 }
 
 @font-face {
@@ -29,7 +30,6 @@ body {
 }
 
 .right-side {
-  width: 1200px;
   background-color: #F8F9FA;
 }
 
@@ -45,7 +45,7 @@ aside h3 {
 }
 
 .sidebar {
-  height: 1080px;
+  height: 1024px;
   width: 240px;
   background-color: #212529;
   color: #FFFFFF;
@@ -78,12 +78,13 @@ aside ul {
 }
 
 .list-ele {
-  height: 48px;
+  height: 52px;
   border: none;
   padding-left: 16px;
   padding-top: 4px;
   border: 0px solid transparent;
   margin-bottom: 5px;
+  width: 176px;
 }
 
 .list-ele:hover {
@@ -93,9 +94,15 @@ aside ul {
 }
 
 .working-opt {
+  position: relative;
+  top: 4px;
   padding-left: 32px;
-  padding-top: 16px;
+  padding-top: 40px;
   width: 176px;
+}
+.working-opt a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 .settings {
@@ -119,12 +126,16 @@ aside ul {
 
 .account-part {
   position: relative;
-  left: 1000px;
+  left: 900px;
   top: 11px;
   margin-bottom: 12px;
   width: 265px;
 }
 
+.New-cust {
+  position: relative;
+  top: -18px;
+}
 .New-cust h1 {
   position: relative;
   left: 30px;
@@ -144,27 +155,26 @@ aside ul {
 }
 
 .upload-box {
-  width: 1220px;
+  width: 1136px;
   height: 784px;
-  position: relative;
-  top: 100px;
+  position: absolute;
   margin-left: 32px;
-  margin-top: 38px;
+  margin-top: 115px;
   background-color: white;
   border-radius: 8px;
 }
 .upload-box .border-box {
-  width: 1180px;
-  height: 750px;
+  width: 1104px;
+  height: 752px;
   margin-left: 16px;
   margin-bottom: 16px;
-  position: relative;
+  position: absolute;
   top: 16px;
 }
-.upload-box .border-box svg {
+.upload-box .border-box .main-pic {
   position: relative;
   top: 160px;
-  left: 440px;
+  left: 400px;
 }
 .upload-box .border-box pre {
   font-size: 24px;
@@ -183,8 +193,161 @@ aside ul {
   top: 170px;
   line-height: 65px;
 }
+.upload-box .border-box .btns {
+  position: relative;
+  right: 40px;
+  display: flex;
+  gap: 8px;
+}
+.upload-box .border-box a {
+  width: 200px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  top: 190px;
+  left: 380px;
+}
+.upload-box .border-box a svg {
+  color: #0057FC;
+}
 .upload-box .border-box:hover {
   border: 1px dashed #3F87FD;
   background-color: #CBE4FE;
   border-width: 5px;
+}
+.upload-box .error {
+  visibility: hidden;
+  width: 1104px;
+  height: 752px;
+}
+.upload-box .error .text {
+  position: absolute;
+  top: 320px;
+  left: 330px;
+  text-align: center;
+}
+.upload-box .error .btns {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 460px;
+  left: 385px;
+  margin-top: 60px;
+}
+.upload-box .error a {
+  width: 200px;
+  height: 48px;
+  display: flex;
+  /* aligns icon + text in row */
+  align-items: center;
+  /* centers vertically */
+  justify-content: center;
+}
+.upload-box .error a svg {
+  color: #0057FC;
+}
+.upload-box .error pre {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 45px;
+}
+.upload-box .error h2 {
+  display: flex;
+  justify-content: center;
+  line-height: 50px;
+  font-size: 38px;
+  line-height: 70px;
+  margin-top: 20px;
+}
+.upload-box .error .error-msg {
+  width: 536px;
+  height: 112px;
+  padding-top: 39px;
+  padding-left: 30px;
+  padding-bottom: -10px;
+  padding-right: 30px;
+  border: 1px solid red;
+  border-radius: 8px;
+  position: absolute;
+  left: 330px;
+  top: 200px;
+}
+.upload-box .error .error-msg p {
+  width: 472px;
+}
+.upload-box .uploading {
+  visibility: hidden;
+  position: absolute;
+  top: 20px;
+}
+.upload-box .uploading .up-box {
+  width: 534px;
+  height: 140px;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: 1px solid #CED4DA;
+  border-radius: 8px;
+  padding-left: 32px;
+  position: absolute;
+  left: 300px;
+  top: 200px;
+}
+.upload-box .uploading .bar {
+  height: 20px;
+  position: absolute;
+  width: 400px;
+  left: 112px;
+  top: 90px;
+}
+.upload-box .uploading p {
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+}
+.upload-box .uploading a {
+  position: absolute;
+  top: 480px;
+  left: 450px;
+}
+
+.u {
+  font-size: 38px;
+  position: absolute;
+  top: 380px;
+  left: 450px;
+  line-height: 65px;
+}
+
+.man {
+  border: 1px solid #0057FC;
+  color: #0057FC;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 14px;
+}
+
+.man:active {
+  background-color: #0057FC;
+  color: white;
+}
+
+.up {
+  background-color: #0057FC;
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 8px;
+}
+
+.up:active {
+  border: 1px solid #0057FC;
+  color: #0057FC;
+  border-radius: 8px;
+  background-color: white;
 }/*# sourceMappingURL=styleUP.css.map */

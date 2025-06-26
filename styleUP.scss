@@ -2,12 +2,12 @@
     margin: 0px;
     padding: 0px;
     font-family: 'PP Neue Montreal', sans-serif;
+    box-sizing: border-box;
 }
 
-body {
-    width: 1440px;
+body{
     background-color: #F8F9FA;
-    ;
+    min-height: 100vh;
 }
 
 @font-face {
@@ -32,7 +32,6 @@ body {
 }
 
 .right-side {
-    width: 1200px;
     background-color: #F8F9FA;
 }
 
@@ -53,7 +52,7 @@ aside {
 }
 
 .sidebar {
-    height: 1080px;
+    height: 1024px;
     width: 240px;
     background-color: #212529;
     color: #FFFFFF;
@@ -90,12 +89,13 @@ aside {
 }
 
 .list-ele {
-    height: 48px;
+    height: 52px;
     border: none;
     padding-left: 16px;
     padding-top: 4px;
     border: 0px solid transparent;
     margin-bottom: 5px;
+    width:176px;
 }
 
 .list-ele:hover {
@@ -105,9 +105,16 @@ aside {
 }
 
 .working-opt {
+    position: relative;
+    top:4px;
     padding-left: 32px;
-    padding-top: 16px;
+    padding-top: 40px;
     width: 176px;
+
+    a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
 }
 
 .settings {
@@ -132,13 +139,15 @@ aside {
 
 .account-part {
     position: relative;
-    left: 1000px;
+    left: 900px;
     top: 11px;
     margin-bottom: 12px;
     width: 265px;
 }
 
 .New-cust {
+    position: relative;
+    top:-18px;
     h1 {
         position: relative;
         left: 30px;
@@ -153,56 +162,235 @@ aside {
         color: #6C757D;
         font-size: 14px;
     }
-    p{
+
+    p {
         position: relative;
-        top:90px;
-        left:30px;
+        top: 90px;
+        left: 30px;
     }
 }
 
-.upload-box{
-    width:1220px;
-    height:784px;
-    position: relative;
-    top:100px;
-    margin-left:32px;
-    margin-top:38px;
+.upload-box {
+    width: 1136px;
+    height: 784px;
+    position: absolute;
+    margin-left: 32px;
+    margin-top: 115px;
     background-color: white;
     border-radius: 8px;
-    .border-box{
-        width:1180px;
-        height:750px;
-        margin-left:16px;
-        margin-bottom:16px;
-        position: relative;
-        top:16px;
-        svg{
+
+    //<<<<- is the display hidden button for the upload file tab
+    .border-box {
+        // visibility: hidden;
+        width: 1104px;
+        height: 752px;
+        margin-left: 16px;
+        margin-bottom: 16px;
+        position: absolute;
+        top: 16px;
+
+        .main-pic {
             position: relative;
-            top:160px;
-            left:440px;
+            top: 160px;
+            left: 400px;
         }
-        pre{
+
+        pre {
             font-size: 24px;
             font-weight: 500;
             display: flex;
             justify-content: center;
             position: relative;
-            top:170px;
+            top: 170px;
             line-height: 40px;
         }
-        h2{
+
+        h2 {
             display: flex;
             justify-content: center;
             font-size: 38px;
             position: relative;
-            top:170px;
+            top: 170px;
             line-height: 65px;
         }
 
+        .btns {
+            position: relative;
+            right:40px;
+            display: flex;
+            gap: 8px;
+        }
+
+        a {
+            width: 200px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            position: relative;
+            top: 190px;
+            left: 380px;
+
+            svg {
+                color: #0057FC;
+            }
+        }
     }
-    .border-box:hover{
+
+    .border-box:hover {
         border: 1px dashed #3F87FD;
         background-color: #CBE4FE;
         border-width: 5px;
     }
+
+    //<<<<- is the display hidden button for the error tab
+    .error {
+        visibility: hidden;
+        width: 1104px;
+        height: 752px;
+
+        .text {
+            position: absolute;
+            top: 320px;
+            left:330px;
+            text-align: center;
+        }
+        .btns {
+            display: flex;
+            gap: 8px;
+            position: absolute;
+            top: 460px;
+            left:385px;
+            margin-top: 60px;
+        }
+
+        a {
+            width: 200px;
+            height: 48px;
+            display: flex;
+            /* aligns icon + text in row */
+            align-items: center;
+            /* centers vertically */
+            justify-content: center;
+
+            svg {
+                color: #0057FC;
+            }
+        }
+
+        pre {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 45px;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            line-height: 50px;
+            font-size: 38px;
+            line-height: 70px;
+            margin-top: 20px;
+        }
+
+        .error-msg {
+            width: 536px;
+            height: 112px;
+            padding-top: 39px;
+            padding-left: 30px;
+            padding-bottom: -10px;
+            padding-right: 30px;
+            border: 1px solid red;
+            border-radius: 8px;
+            position: absolute;
+            left: 330px;
+            top: 200px;
+
+            p {
+                width: 472px;
+            }
+
+        }
+    }
+
+    .uploading {
+        visibility: hidden;
+        position: absolute;
+        top: 20px;
+
+        .up-box {
+            width: 534px;
+            height: 140px;
+            overflow: hidden;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            border: 1px solid #CED4DA;
+            border-radius: 8px;
+            padding-left: 32px;
+            position: absolute;
+            left: 300px;
+            top: 200px;
+        }
+
+        .bar {
+            height: 20px;
+            position: absolute;
+            width: 400px;
+            left: 112px;
+            top: 90px;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            // position: relative;
+            // top: 170px;
+            line-height: 40px;
+        }
+
+        a {
+            position: absolute;
+            top: 480px;
+            left: 450px;
+        }
+    }
+}
+
+.u {
+    font-size: 38px;
+    position: absolute;
+    top: 380px;
+    left: 450px;
+    line-height: 65px;
+}
+
+.man {
+    border: 1px solid #0057FC;
+    color: #0057FC;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+}
+
+.man:active {
+    background-color: #0057FC;
+    color: white;
+}
+
+.up {
+    background-color: #0057FC;
+    border: 1px solid transparent;
+    color: white;
+    border-radius: 8px;
+}
+
+.up:active {
+    border: 1px solid #0057FC;
+    color: #0057FC;
+    border-radius: 8px;
+    background-color: white;
 }

@@ -1,0 +1,287 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "PP Neue Montreal", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F8F9FA;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("./fonts/PPNeueMontreal-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("./fonts/PPNeueMontreal-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+.main-logo {
+  width: 208px;
+  height: 64px;
+  padding-left: 32px;
+  padding-top: 27px;
+}
+
+.right-side {
+  background-color: #F8F9FA;
+}
+
+ul svg {
+  position: relative;
+  top: 7px;
+  right: 3px;
+}
+
+aside h3 {
+  width: 240px;
+  height: 64px;
+}
+
+.sidebar {
+  height: 1024px;
+  width: 240px;
+  background-color: #212529;
+  color: #FFFFFF;
+  transition: width 0.3s;
+}
+.sidebar.collapsed {
+  width: 80px;
+}
+.sidebar.collapsed .nav-text,
+.sidebar.collapsed .main-logo,
+.sidebar.collapsed .user {
+  display: none;
+}
+
+.top {
+  display: flex;
+}
+
+.collapse {
+  position: absolute;
+  left: 190px;
+}
+
+aside ul {
+  list-style-type: none;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 2.5%;
+  font-size: 14px;
+}
+
+.list-ele {
+  height: 52px;
+  border: none;
+  padding-left: 16px;
+  padding-top: 4px;
+  border: 0px solid transparent;
+  margin-bottom: 5px;
+  width: 176px;
+}
+
+.list-ele:hover {
+  border: 0.1px solid transparent;
+  border-radius: 8px;
+  background-color: #343A40;
+}
+
+.working-opt {
+  position: relative;
+  top: 4px;
+  padding-left: 32px;
+  padding-top: 40px;
+  width: 176px;
+}
+.working-opt a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.settings {
+  height: 186px;
+  width: 176px;
+  padding-left: 32px;
+  padding-top: 16px;
+}
+.settings span {
+  font-size: 14px;
+  color: #495057;
+}
+
+.main-set {
+  margin-top: 16px;
+}
+
+body,
+html {
+  width: 1440px;
+  overflow-x: hidden;
+}
+
+.fullDoc {
+  display: flex;
+}
+
+.account-part {
+  position: relative;
+  left: 900px;
+  top: 11px;
+  margin-bottom: 12px;
+  width: 265px;
+}
+
+.New-cust {
+  position: relative;
+  top: -18px;
+}
+.New-cust h1 {
+  position: relative;
+  left: 30px;
+  top: 70px;
+  margin-top: 16px;
+  width: 270px;
+}
+
+.line2 span {
+  color: #6C757D;
+  font-size: 14px;
+}
+.line2 p {
+  position: relative;
+  top: 90px;
+  left: 30px;
+}
+
+.form {
+  width: 1136px;
+  height: 784px;
+  position: absolute;
+  margin-left: 32px;
+  margin-top: 115px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 23px 16px 0px 16px;
+  font-size: 14px;
+}
+.form h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.form select {
+  width: 357.43px;
+  height: 40px;
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid #CED4DA;
+}
+.form .dob {
+  display: flex;
+  gap: 10px;
+}
+.form .dob select {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.form .form-group {
+  margin-bottom: 40px;
+}
+.form .form-group p {
+  color: #6C757D;
+  margin-top: 5px;
+  position: relative;
+  left: 190px;
+}
+.form .form-group label {
+  gap: 20px;
+}
+.form input {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #CED4DA;
+  outline: none;
+  padding-left: 5px;
+  margin-top: 5px;
+}
+.form .required {
+  color: red;
+  margin-left: 4px;
+}
+
+input:focus {
+  border: 1px solid #0043D8;
+}
+
+.butns {
+  display: flex;
+  font-size: 14px;
+  position: absolute;
+  right: 30px;
+  gap: 8px;
+}
+.butns a {
+  text-decoration: none;
+  color: black;
+}
+
+#dchang {
+  width: 166px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #CED4DA;
+  border-radius: 8px;
+}
+
+#can {
+  width: 89px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #CED4DA;
+  border-radius: 8px;
+}
+
+#create {
+  background-color: #E9ECEF;
+  color: #ADB5BD;
+  cursor: not-allowed;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+#create.active {
+  background-color: #0057FC;
+  color: white;
+  cursor: pointer;
+}
+
+#create {
+  width: 87px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #CED4DA;
+  border-radius: 8px;
+  background-color: #E9ECEF;
+  cursor: not-allowed;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+#create a {
+  color: #ADB5BD;
+}
+#create.active {
+  background-color: #0057FC;
+  cursor: pointer;
+}
+#create.active a {
+  color: white;
+}/*# sourceMappingURL=styleMan.css.map */

@@ -6,7 +6,8 @@
 }
 
 body{
-    width:1440px;
+    width:1300px;
+    height: 1024px;
     background-color: #F8F9FA;;
 }
 
@@ -90,6 +91,10 @@ aside {
     padding-top: 4px;
     border: 0px solid transparent;
     margin-bottom: 5px;
+    a{
+        text-decoration: none;
+        color: #FFFFFF;
+    }
 }
 
 .list-ele:hover {
@@ -128,15 +133,19 @@ aside {
     height: 64px;
     position: absolute;
     top: 15px;
-    left: 1240px;
+    left: 1120px;
     margin-right: 8px;
     margin-right: 8px;
 }
-
+table{
+    height:600px;
+    width:1104px;
+}
 .cust_list {
     position: absolute;
     top: 115px;
     left: 300px;
+    width:688px;
 
     h1 {
         font-size: 46px;
@@ -155,7 +164,7 @@ aside {
 }
 
 .dropdown {
-    position: relative;
+    position: absolute;
     display: inline-block;
     position: absolute;
     top: 260px;
@@ -232,6 +241,9 @@ table {
 }
 
 .down{
+    position: absolute;
+    top:1085px;
+    left:300px;
     .button{
     height: 40px;
     width: 40px;
@@ -239,10 +251,6 @@ table {
     border: 1.5px solid #CED4DA;
     border-radius: 8px;
     font-weight: 500;
-    position: relative;
-    left:300px;
-    bottom:112px;
-    z-index: 10;
 }
 .button:hover{
     border: 1.5px solid #0057FC;
@@ -254,10 +262,11 @@ table {
     height: 40px;
     border: 1.5px solid #CED4DA;
     border-radius: 8px;
-    position: relative;
+    position: absolute;
     left:600px;
     z-index: 10;
-    bottom:152px;
+    top:1085px;
+    // bottom:1px;
 }
 
 .search-bar{
@@ -265,9 +274,11 @@ table {
     input{
         width:320px;
         height:40px;
-        position: relative;
-        bottom:1031px;
-        left:1180px;
+        position: absolute;
+        top:260px;
+
+        // bottom:1031px;
+        left:1040px;
         border-radius: 8px;
         border:1px solid #CED4DA;
         padding-left: 16px; 
